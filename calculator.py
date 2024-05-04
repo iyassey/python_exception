@@ -8,7 +8,16 @@ while True:
 
 #create a list that will contain the numbers that the user will input
     content_integers = []
+
 #create a function that will ask the user for numbers and determine if the the user input float and not string
+    def evaluate():
+        while True:
+            try:
+                number = float(input("Enter a number: "))
+            except ValueError:
+                continue
+            return number
+
 
 #create a for loop that will ask the user for two numbers
 
