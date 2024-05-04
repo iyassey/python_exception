@@ -4,6 +4,7 @@
 #this program will also use different exceptions to capture errors during runtime
 
 #create a loop for the whole program 
+while True:
 
 #create a list that will contain the numbers that the user will input
 
