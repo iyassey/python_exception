@@ -23,22 +23,51 @@ while True:
         integers = evaluate()
         content_integers.append(integers)
 
-
-    print(content_integers)
-
 #create an inner while loop and ask the user for their desire mathematical operations that is limited to addition, subtraction, division, and multiplication
+    while True:
+        try:
+            operation = str(input("Enter the operation: +, -. x, /: "))
 
 #this block of code will execute if the user chose addition
+            if operation == "+":
+                sum = content_integers[0] + content_integers[1]
+                integers = round(sum, 2)
+                statement  = (f"The sum of {content_integers[0]} and {content_integers[1]} is {integers} \n")
+                print(statement)
+                break
 
 #this block of code will execute if the user chose subtraction
+            elif operation == "-":
+                difference = content_integers[0] - content_integers[1]
+                integers = round(difference,2)
+                statement = (f"The difference of {content_integers[0]} and {content_integers[1]} is {integers} \n")
+                print(statement)
+                break
 
 #this block of code will execute if the user chose multiplication
+            elif operation == "x":
+                product = content_integers[0] * content_integers[1]
+                integers = round(product,2)
+                statement = (f"The product of {content_integers[0]} and {content_integers[1]} is {integers} \n")
+                print(statement)
+                break
 
 #this block of code will execute if the user chose division
+            elif operation == "/":
+                quotient = content_integers[0] / content_integers[1]
+                integers = round(quotient,2)
+                statement = (f"The quotient of {content_integers[0]} and {content_integers[1]} is {integers} \n")
+                break
 
 #this block of code will execute if the user chose an operation that is not included in the choices
+        except ValueError:
+            print("Invalid operation")
+            continue
 
 #this block of code will execute if the program will detect a zero division error
+        except ZeroDivisionError:
+            print("Zero Division Error: Chose another operation")
+            continue
 
 #ask the user if they want to create a text file
 #if the user wants to create a text file, they can choose if they want to append or write a text file
