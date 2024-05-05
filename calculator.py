@@ -57,6 +57,7 @@ while True:
                 quotient = content_integers[0] / content_integers[1]
                 integers = round(quotient,2)
                 statement = (f"The quotient of {content_integers[0]} and {content_integers[1]} is {integers} \n")
+                print(statement)
                 break
 
 #this block of code will execute if the user chose an operation that is not included in the choices
