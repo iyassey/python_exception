@@ -70,10 +70,31 @@ while True:
             continue
 
 #ask the user if they want to create a text file
+    while True:
+        try:
+            answer = str(input("Do you want to create a text file? \n Append lets you add additional data \n Write lets you overwrite the existing data \n No means ou do not want to create a text file \n a/w/n: "))
+            answer = answer[:1].lower()
+
 #if the user wants to create a text file, they can choose if they want to append or write a text file
-
+            if answer == "a":
+                with open("statement.txt","a") as statement_file:
+                    statement_file.write(str(statement))
+                    break
+            
+            elif answer == "w":
+                with open ("statement.txt","w") as statement_file:
+                    statement_file.write(str(statement))
+                    break
 #exit the loop if the user do not want to create a text file
+            elif answer == "n":
+                break
 
+            else:
+                continue
+
+        except ValueError:
+            continue
 #ask the user if they want to try again or exit the program
+            
 
 #end of the program 
