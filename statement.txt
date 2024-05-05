@@ -1,0 +1,2 @@
+The product of 4.0 and 0.0 is 0.0 
+The difference of 8.0 and 7.0 is 1.0 

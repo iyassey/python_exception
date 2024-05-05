@@ -85,6 +85,7 @@ while True:
                 with open ("statement.txt","w") as statement_file:
                     statement_file.write(str(statement))
                     break
+
 #exit the loop if the user do not want to create a text file
             elif answer == "n":
                 break
@@ -94,7 +95,23 @@ while True:
 
         except ValueError:
             continue
+
 #ask the user if they want to try again or exit the program
-            
+    while True:
+        try:
+            final_answer = str(input("Do you want to try again? yes or no: "))
+            final_answer = final_answer.lower().strip()
+            if final_answer == "yes":
+                break
+
+            elif final_answer == "no":
+                print("Thank you for using my program!")
+                exit()      
+
+            else:
+                continue
+        
+        except ValueError:
+            continue
 
 #end of the program 
