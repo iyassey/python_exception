@@ -18,8 +18,13 @@ while True:
                 continue
             return number
 
-
 #create a for loop that will ask the user for two numbers
+    for number in range(2):
+        integers = evaluate()
+        content_integers.append(integers)
+
+
+    print(content_integers)
 
 #create an inner while loop and ask the user for their desire mathematical operations that is limited to addition, subtraction, division, and multiplication
 
